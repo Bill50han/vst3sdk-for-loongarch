@@ -174,6 +174,31 @@ cd TheFolderWhereYouDownloadTheSDK
 copy_vst2_to_vst3_sdk.bat
 ```
 
+### Build the examples on Linux
+
+- <del>Install the required packages [Package Requirements](https://steinbergmedia.github.io/vst3_dev_portal/pages/Getting+Started/How+to+setup+my+system.html#for-linux)</del>  
+[Follow this](#install-on-loongarch64-only-tested-on-arch-linux)
+- Create a folder for the build and move to this folder (using cd):
+
+```c
+mkdir build
+cd build
+```
+
+- Generate the Solution/Projects: provide the path of the Project where CMakeLists.txt is located:
+
+```c
+cmake ../vst3sdk
+```
+
+- Now you can build the plug-in:
+
+```c
+make
+// (or alternatively for example for release)
+cmake --build . --config Release
+```
+
 ### Build the examples on Windows
 
 - Create a folder for the build and move to this folder (using cd):
@@ -225,30 +250,6 @@ cmake -DCMAKE_BUILD_TYPE=Debug ../
 
 ```c
 xcodebuild 
-// (or alternatively for example for release)
-cmake --build . --config Release
-```
-
-### Build the examples on Linux
-
-- Install the required packages [Package Requirements](https://steinbergmedia.github.io/vst3_dev_portal/pages/Getting+Started/How+to+setup+my+system.html#for-linux)
-- Create a folder for the build and move to this folder (using cd):
-
-```c
-mkdir build
-cd build
-```
-
-- Generate the Solution/Projects: provide the path of the Project where CMakeLists.txt is located:
-
-```c
-cmake ../vst3sdk
-```
-
-- Now you can build the plug-in:
-
-```c
-make
 // (or alternatively for example for release)
 cmake --build . --config Release
 ```
