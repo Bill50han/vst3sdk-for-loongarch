@@ -3,6 +3,15 @@
 
 # Welcome to VST SDK 3.7.x
 
+---
+
+## Install on loongarch64 (only tested on arch linux)
+
+1.  Install these packages through `pacman`: `xcb-util-cursor xcb-util-errors xcb-imdkit xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm xcb-util-xrm libx11 libxcb libxkbcommon libxkbcommon-x11 libxkbfile fontconfig cairo cairomm gtkmm3 sqlite vsqlite++ cmake gcc`
+2.  [Next](#build-the-examples-on-linux)
+
+---
+
 ## Table Of Contents
 
 1. [The VST SDK package](#100)
